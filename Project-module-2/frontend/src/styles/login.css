@@ -1,0 +1,98 @@
+/* body {
+  background-image: url("https://www.mywaste.care/Content/img/login-background.jpg");
+  /* background-size: 70em; */
+/* background-size: cover;
+  background-repeat: no-repeat;
+} */
+
+/* .bg {
+  height: 100%;
+
+  /* Center and scale the image nicely */
+/* background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@media screen and (max-width: 1024px) {
+  /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px; /* 50% */
+  }
+}
+
+.form-parent {
+  padding-top: 50px;
+  padding-left: 450px;
+  padding-right: 300px;
+  /* display: flex;
+  justify-content: center; */
+  max-height: 450px;
+  /* width: 1000px; */
+}
+
+.emaillabel {
+  color: #003366 !important;
+}
+
+.divtitle {
+  /* margin-top: 0px; */
+  /* height: 40px;
+  line-height: 20px;
+  padding: 50px; */
+  margin-left: 50px;
+  background-color: #ef8275;
+  /* max-height: 50px; */
+  max-width: 160px;
+  border-radius: 10px;
+}
+
+.py-4 {
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.btnmanual {
+  background-color: #003366 !important;
+}
+
+.divmanual {
+  background-color: #003366 !important;
+}
+
+.containermanual {
+  display: flex;
+  justify-content: center;
+  width: 1000px !important;
+  padding-left: 100px !important;
+}
+
+.cardclass {
+  background-color: transparent;
+}
+
+.loginbtn {
+  background-color: #003366 !important;
+  /* padding-right: 50px; */
+}
+
+.input1 label {
+  color: #5e35b1 !important;
+}
