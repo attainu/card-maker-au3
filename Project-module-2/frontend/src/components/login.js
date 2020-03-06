@@ -23,6 +23,7 @@ const FormPage = props => {
 
   const handleSubmit = async e => {
     e.preventDefault();
+    console.log(email, password);
 
     try {
       const token = await axios.post("http://localhost:5000/api/auth/signin", {
@@ -35,6 +36,7 @@ const FormPage = props => {
           "http://localhost:5000/api/auth/user",
           { headers: { "x-auth-token": token.data } }
         );
+        console.log(userData);
         users.userDispatch({ type: "Add_User", data: userData.data });
         props.history.push(`/`);
       } else {
@@ -55,13 +57,13 @@ const FormPage = props => {
       <img
         src="https://www.mywaste.care/Content/img/login-background.jpg"
         alt="bg"
-        className="bg"
+        class="bg"
       ></img>
 
       <MDBRow>
         <MDBCol md="8">
           <MDBCard
-            className="cardclass offset-md-7"
+            className="cardclass offset-md-7 mt-5"
             style={{ backgroundColor: "rgb(62,39,35,.1)" }}
           >
             <MDBCardBody>
@@ -74,9 +76,7 @@ const FormPage = props => {
               {errorData.errorMessage === "true" ? (
                 ""
               ) : (
-                // <MDBContainer>
                 <MDBAlert color="warning">{errorData.errorMessage}</MDBAlert>
-                // </MDBContainer>
               )}
 
               <div class="md-form">
@@ -91,7 +91,7 @@ const FormPage = props => {
                   Email
                 </label>
               </div>
-              <div className="md-form">
+              <div class="md-form">
                 <input
                   style={{ borderRadius: "3px" }}
                   onChange={e => setPassword(e.target.value)}

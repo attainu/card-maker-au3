@@ -21,7 +21,7 @@ module.exports = (connection, Sequelize) => {
       }
     },
     title: {
-      type: Sequelize.STRING(20),
+      type: Sequelize.STRING,
       allowNull: false,
       validate: {
         len: {
@@ -53,7 +53,7 @@ module.exports = (connection, Sequelize) => {
       defaultValue: false
     },
     isWhatsup: {
-      type: Sequelize.STRING,
+      type: Sequelize.BOOLEAN,
       defaultValue: false
     },
     isContactForm: {
@@ -62,47 +62,47 @@ module.exports = (connection, Sequelize) => {
     },
     facebookLink: {
       type: Sequelize.STRING,
-      defaultValue: null,
-      validate: {
-        isUrl: {
-          args: true,
-          msg: "Not a Correct Url"
-        }
-      }
+      defaultValue: null
+      // validate: {
+      //   isUrl: {
+      //     args: true,
+      //     msg: "Not a Correct Url"
+      //   }
+      // }
     },
     linkedin: {
       type: Sequelize.STRING,
-      defaultValue: null,
-      validate: {
-        isUrl: {
-          args: true,
-          msg: "Not a Correct Url"
-        }
-      }
+      defaultValue: null
+      // validate: {
+      //   isUrl: {
+      //     args: true,
+      //     msg: "Not a Correct Url"
+      //   }
+      // }
     },
     youtube: {
       type: Sequelize.STRING,
-      defaultValue: null,
-      validate: {
-        isUrl: true,
-        msg: "Not A Correct Url"
-      }
+      defaultValue: null
+      // validate: {
+      //   isUrl: true,
+      //   msg: "Not A Correct Url"
+      // }
     },
     instagram: {
       type: Sequelize.STRING,
-      defaultValue: null,
-      validate: {
-        isUrl: true,
-        msg: "Not A Correct Url"
-      }
+      defaultValue: null
+      // validate: {
+      //   isUrl: true,
+      //   msg: "Not A Correct Url"
+      // }
     },
     website: {
       type: Sequelize.STRING,
-      allowNull: true,
-      validate: {
-        isUrl: true,
-        msg: "Not A Valid Website"
-      }
+      allowNull: true
+      // validate: {
+      //   isUrl: true,
+      //   msg: "Not A Valid Website"
+      // }
     },
     isPublic: {
       type: Sequelize.BOOLEAN,
@@ -113,11 +113,11 @@ module.exports = (connection, Sequelize) => {
       defaultValue: 0
     },
     profileImage: {
-      type: Sequelize.STRING,
+      type: Sequelize.TEXT("large"),
       allowNull: true
     },
     coverImage: {
-      type: Sequelize.STRING,
+      type: Sequelize.TEXT("large"),
       allowNull: true
     },
     // ownerId: {

@@ -16,6 +16,9 @@ import UserContext from "./context/userContext";
 
 // --------------------------- Reducers ------------------------
 import UserReducer from "./reducers/userReducer";
+import OpenCard from "./components/openCard";
+import AllCard from "./components/dashboard/Allcard";
+import Analytics from "./components/dashboard/Analytics";
 
 function App() {
   const [userData, userDispatch] = useReducer(UserReducer, []);
@@ -29,6 +32,9 @@ function App() {
           <Route exact path="/signin" component={Signin} />
           <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/dashboard/new/jade" component={JadeForm} />
+          <Route exact path="/card/:id" component={OpenCard} />
+          <Route exact path="/dashboard/:id/analytics" component={Analytics} />
+          <Route exact path="/dashboard/:id/showallcard" component={AllCard} />
         </Router>
       </UserContext.Provider>
     </div>

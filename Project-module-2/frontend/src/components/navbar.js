@@ -31,7 +31,9 @@ const NavBar = props => {
         const user = await axios.get("http://localhost:5000/api/auth/user", {
           headers: { "x-auth-token": token }
         });
-        userData.userDispatch({ type: "Add_User", data: user.data });
+        if (userData.userData.length === 0) {
+          userData.userDispatch({ type: "Add_User", data: user.data });
+        }
       }
     } catch (error) {
       console.log(error);
@@ -58,7 +60,7 @@ const NavBar = props => {
       >
         <MDBNavbarBrand>
           <MDBNavLink to="/" className="link">
-            <strong className="white-text">Navbar</strong>
+            <strong className="white-text">bCard</strong>
           </MDBNavLink>
         </MDBNavbarBrand>
         <MDBNavbarToggler onClick={toggleCollapse} className="toggler" />

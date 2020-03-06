@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Navbar from "./navbar";
 import "../styles/homepage.css";
@@ -6,10 +7,6 @@ import "../styles/homepage.css";
 const Homepage = () => {
   return (
     <div>
-      {/* <!-- Navbar --> */}
-
-      {/* <!-- Full Page Intro --> */}
-      {/* <!--Main layout--> */}
       <main>
         <Navbar />
         <div className="container">
@@ -48,16 +45,14 @@ const Homepage = () => {
                 <ul style={{ listStyle: "none" }}>
                   <li style={{ verticalAlign: "middle" }}>
                     <span>
-                      <i className="material-icons orange600">
-                        edit &nbsp;&nbsp;
-                      </i>
+                      <i class="material-icons orange600">edit &nbsp;&nbsp;</i>
                     </span>
                     <span style={{ paddingBottom: "860px" }}>
                       Easy. Create within minutes
                     </span>
                   </li>
                   <li>
-                    <i className="material-icons orange600">
+                    <i class="material-icons orange600">
                       picture_in_picture &nbsp;&nbsp;
                     </i>
                     <span style={{ paddingTop: "30px" }}>
@@ -65,15 +60,11 @@ const Homepage = () => {
                     </span>
                   </li>
                   <li>
-                    <i className="material-icons orange600">
-                      share &nbsp;&nbsp;
-                    </i>
+                    <i class="material-icons orange600">share &nbsp;&nbsp;</i>
                     Share from anywhere and anytime
                   </li>
                   <li>
-                    <i className="material-icons orange600">
-                      public &nbsp;&nbsp;
-                    </i>
+                    <i class="material-icons orange600">public &nbsp;&nbsp;</i>
                     Save trees and contribute to the environment
                   </li>
                 </ul>
@@ -95,7 +86,7 @@ const Homepage = () => {
                   className="btn btn-grey btn-md"
                 >
                   <i
-                    className="material-icons orange600"
+                    class="material-icons orange600"
                     style={{ verticalAlign: "middle", paddingBottom: "7px" }}
                   >
                     add
@@ -103,7 +94,7 @@ const Homepage = () => {
                   <span
                     style={{ fontSize: "17px", textTransform: "capitalize" }}
                   >
-                    Create your own
+                    <Link to="/signup">Create your own</Link>
                   </span>
                 </button>
               </div>
@@ -179,7 +170,7 @@ const Homepage = () => {
                     className="embed-responsive-item"
                     src="https://www.youtube.com/embed/ITzAIWhdn_I"
                     title="myFrame"
-                    allowFullScreen
+                    allowfullscreen
                   ></iframe>
                 </div>
               </div>
@@ -346,9 +337,7 @@ const Homepage = () => {
                         id="materialRegisterFormFirstName"
                         className="form-control"
                       />
-                      <label htmlFor="materialRegisterFormFirstName">
-                        Name
-                      </label>
+                      <label for="materialRegisterFormFirstName">Name</label>
                     </div>
                   </div>
                 </div>
@@ -360,7 +349,7 @@ const Homepage = () => {
                     id="materialRegisterFormEmail"
                     className="form-control"
                   />
-                  <label htmlFor="materialRegisterFormEmail">E-mail</label>
+                  <label for="materialRegisterFormEmail">E-mail</label>
                 </div>
 
                 {/* <!-- Phone number --> */}
@@ -371,9 +360,7 @@ const Homepage = () => {
                     className="form-control"
                     aria-describedby="materialRegisterFormPhoneHelpBlock"
                   />
-                  <label htmlFor="materialRegisterFormPhone">
-                    Phone number
-                  </label>
+                  <label for="materialRegisterFormPhone">Phone number</label>
                 </div>
                 <div className="form-row">
                   <div className="col">
@@ -383,7 +370,7 @@ const Homepage = () => {
                         id="message"
                         className="form-control"
                       />
-                      <label htmlFor="message">Message</label>
+                      <label for="message">Message</label>
                     </div>
                   </div>
                 </div>
