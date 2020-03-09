@@ -75,7 +75,6 @@ function Signup(props) {
                       name="firstName"
                       group
                       type="text"
-                      // validate
                       id="materialFormRegisterNameEx"
                       required
                     />

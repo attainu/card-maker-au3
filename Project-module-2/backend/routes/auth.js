@@ -6,6 +6,15 @@ require("dotenv").config();
 
 const auth = require("../middlewares/signup");
 const verify = require("../middlewares/auth");
+const emailSender = require("../middlewares/formEmail");
+
+router.post("/emailSender", emailSender, (req, res) => {
+  try {
+    res.send("Successfully Send Email");
+  } catch (error) {
+    res.status(400).send(error);
+  }
+});
 
 router.post("/", auth, async (req, res) => {
   try {

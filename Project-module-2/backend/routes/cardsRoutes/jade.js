@@ -17,7 +17,19 @@ router.get("/:id/show", async (req, res) => {
     const findCard = await jade.findByPk(req.params.id, {
       include: [{ model: users, as: "userRef" }]
     });
-    res.json(findCard);
+    res.status(200).json(findCard);
+  } catch (error) {
+    res.status(400).send(error);
+  }
+});
+
+router.post("/:id/edit", async (req, res) => {
+  try {
+    const updatedData = await jade.update(req.body, {
+      where: { id: req.params.id }
+    });
+    res.json(updatedData);
+    console.log(updatedData);
   } catch (error) {
     res.status(400).send(error);
   }

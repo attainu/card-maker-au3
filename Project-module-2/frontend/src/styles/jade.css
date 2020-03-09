@@ -1,0 +1,54 @@
+.togglejade {
+  background-color: transparent !important;
+}
+/* .footermanual {
+    background-color: black !important;
+  } */
+/* p:nth-child(odd) {
+  background-color: #003366;
+}
+p:nth-child(even) {
+  background-color: #2e2e2e;
+}
+.odd:hover {
+  background-color: rgb(90, 64, 8);
+}
+.even:hover {
+  background-color: white;
+} */
+
+.field {
+  background-color: whitesmoke;
+  margin-top: 15px !important;
+  /* height: 40px;
+  line-height: 40px; */
+  vertical-align: middle;
+}
+
+.togglejade {
+  height: 20px;
+  line-height: 20px !important;
+  vertical-align: middle !important;
+  left: 120px;
+  color: black;
+  /* width: 20px !important; */
+}
+
+.downicon {
+  padding-bottom: 30px !important;
+  position: relative;
+  bottom: 9px;
+}
+
+.collapsedown {
+  background-color: whitesmoke;
+}
+
+.toggleicon {
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+/* .formargin {
+  margin-top: 40px !important;
+} */

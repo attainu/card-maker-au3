@@ -1,0 +1,20 @@
+.manualcardclass {
+  width: 400;
+  margin-top: -100px;
+  border: 3px solid black;
+  left: 50px;
+}
+
+/* .manualtoggleform {
+  display: inline;
+} */
+
+.toggleform {
+  background-color: rosybrown !important;
+  height: 20px;
+  line-height: 20px !important;
+  /* vertical-align: middle !important; */
+  /* left: 200px !important; */
+  color: black;
+  /* width: 20px !important; */
+}

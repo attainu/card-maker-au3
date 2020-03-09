@@ -1,4 +1,4 @@
-// const Sequelize = require("sequelize");
+const Sequelize = require("sequelize");
 
 // ================================= User Authentication Model --------------------
 
@@ -8,10 +8,12 @@ const userModel = require("../models/Users");
 
 const jadeModel = require("../models/jadeC");
 
-const connection = new Sequelize("dibizDatabase", "sahil", "123456789", {
-  host: "localhost",
-  dialect: "postgres"
-});
+const connection = new Sequelize(
+  "postgres://bhjtctut:hoaWbaD1q4DA1sHxARwDXuwm6Sm1Jxbj@drona.db.elephantsql.com:5432/bhjtctut",
+  {
+    logging: false
+  }
+);
 
 connection
   .authenticate()
